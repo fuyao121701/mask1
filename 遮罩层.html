@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bg{
+            display: none;
+            position: absolute;
+            left: 0;
+            top:0;
+            bottom: 0;
+            right: 0;
+            background-color: black;
+            opacity: .5;
+            z-index: 1;
+        }
+        .popup{
+            display: none;
+            position: absolute;
+            left: 50%;
+            top:50%;
+            background-color: #FFFFFF;
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+<button class="button">打开</button>
+<div class="bg">
+</div>
+<div class="popup">
+    关闭遮罩层
+</div>
+
+</body>
+</html>
+<script src="zepto.js">
+
+</script>
+<script>
+    $(".button").on("click",function () {
+        $(".bg").css("display","block");
+        $(".popup").css("display","block")
+    })
+    $(".popup").on("click",function () {
+        $(".bg").css("display","none");
+        $(".popup").css("display","none")
+    })
+
+
+</script>
